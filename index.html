@@ -13,16 +13,16 @@
     <div id="app">
         <div class="slider">
             <div class="slider-img" v-for="(item, i) in arrImages" :key="item.title" 
-            :style ="background-image: url('image')">
+            :style="{ 'background-image': 'url(img/' + item.image + ')'}">
                 <div class="block">
-                    <h2></h2>
-                    <p></p>
+                    <h2>{{ arrImages.title }}</h2>
+                    <p>{{ arrImages.text }}</p>
                 </div>
             </div>
         </div>
         <div class="thumbnail">
             <div class="thumbnail-img-container" v-for ="(item, i) in arrImages" :key="item.title">
-                <img  src="arrImages.image" alt="">
+                <img  src="img/' + item.image +" alt="">
             </div>
             <div class="controls">
                 <button class="btn-up">
